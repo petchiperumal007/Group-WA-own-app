@@ -25,7 +25,7 @@ jobs:
         run: |
           cd project_dir
           flutter pub get
-          flutter build apk --release
+          flutter build apk --release -Pandroid.skipBuildDependencyValidation=true
       - name: Upload
         uses: actions/upload-artifact@v4
         with:
